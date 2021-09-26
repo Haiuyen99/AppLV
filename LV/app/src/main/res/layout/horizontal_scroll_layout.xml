@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="8dp"
+    android:paddingBottom="8dp"
+    android:elevation="3dp"
+    android:id="@+id/horizontal_scroll_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <TextView
+        android:id="@+id/horizontal_scroll_layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deals of the Day "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontal_scroll_layout_btn"
+        app:layout_constraintTop_toTopOf="@id/horizontal_scroll_layout_btn"
+        android:layout_marginLeft="16dp" />
+    <Button
+        android:id="@+id/horizontal_scroll_layout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="View all"
+        android:textSize="12sp"
+        android:layout_marginRight="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/horizontal_scroll_layout_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll_layout_btn"
+
+/>
+</androidx.constraintlayout.widget.ConstraintLayout>

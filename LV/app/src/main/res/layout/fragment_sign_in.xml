@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_500"
+    android:id="@+id/registe_framelayout"
+    tools:context=".SignInFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <ImageButton
+           android:id="@+id/close"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="16dp"
+           android:background="@color/purple_500"
+           android:src="@drawable/ic_baseline_close_24"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <ImageView
+           android:id="@+id/imageView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="8dp"
+           android:src="@drawable/logo"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintVertical_bias="0.2"/>
+ <EditText
+     android:id="@+id/edt_singinemail"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+     android:layout_marginRight="16dp"
+     android:layout_marginLeft="16dp"
+     android:layout_marginTop="32dp"
+     android:inputType="textEmailAddress"
+     android:textColorHint="#ffffff"
+     android:backgroundTint="#ffffff"
+     android:hint="Email Id"
+     android:ems="10"
+     android:textColor="@color/white"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/imageView"
+     />
+
+       <EditText
+           android:id="@+id/edt_signinpassword"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="16dp"
+           android:layout_marginLeft="16dp"
+           android:layout_marginTop="20dp"
+           android:inputType="textPassword"
+           android:textColorHint="#ffffff"
+           android:backgroundTint="#ffffff"
+           android:ems="10"
+           android:textColor="@color/white"
+           android:hint="Password"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/edt_singinemail" />
+
+       <TextView
+           android:id="@+id/tv_forgotpassword"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="4dp"
+           android:layout_marginTop="10dp"
+           android:text="Forgot Password"
+           android:textColor="@color/white"
+           app:layout_constraintStart_toStartOf="@id/edt_signinpassword"
+           app:layout_constraintTop_toBottomOf="@id/edt_signinpassword"  />
+
+       <Button
+           android:id="@+id/btn_singin"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="8dp"
+           android:layout_marginRight="16dp"
+           android:layout_marginLeft="16dp"
+           android:text="Sign in"
+           android:textColor="@color/purple_500"
+           android:backgroundTint="@color/white"
+           android:textAllCaps="false"
+           android:enabled="false"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/tv_forgotpassword"
+           />
+
+       <TextView
+           android:id="@+id/tv_dont_have_account"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+             android:layout_marginTop="2dp"
+           android:text="Don't have an account? Sign Up"
+           android:textColor="@color/white"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/btn_singin"
+           />
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

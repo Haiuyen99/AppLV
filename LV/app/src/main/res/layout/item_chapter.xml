@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/chapterNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chương 1 : "
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent "
+            />
+
+        <TextView
+            android:id="@+id/chapterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Mở ra nhân sinh "
+            android:textStyle="bold"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toRightOf="@id/chapterNumber"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/chapter"
+        app:layout_constraintTop_toBottomOf="@id/chapter">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+
+            android:text="Đánh giá: 9.2/10 từ 1743 lượt
+Từ Vi Vũ tính hơi hơi ưa sạch, da mặt cũng hơi hơi dày, ngoài ra còn hơi hơi bỉ ổi, nhưng anh trước mặt mọi người luôn luôn là một Từ Vi Vũ trăng thanh gió mát, tách biệt xa lạ, trong kiêu ngạo có lạnh lùng, trong lạnh lùng có xa cách, trong xa cách có cao sang.
+
+Nhưng cứ về đến nhà là anh nhập vào trạng thái “cuồng cởi”:
+
+“Tắm, tắm, tắm. Thanh Khê, em có muốn đến chà đạp anh không?”
+
+Thanh Khê nghĩ, liệu anh còn có thể bỉ ổi hơn được nữa không?
+
+Hoặc là: “Vợ ơi, nấu cơm cho anh đi, là yêu cầu hợp pháp đấy!”
+
+“Tình yêu, mua quần áo cho anh đi, anh hết quần áo mặc rồi, yêu cầu hợp pháp!”
+
+“Vợ, tối nay xem phim nhé, yêu cầu hợp pháp đấy!”
+
+“Thanh Khê này, hát tình ca cho anh đi, yêu cầu hợp pháp, yêu cầu hợp pháp nhé!”
+
+Những lúc như vậy, “bạn nhỏ” Thanh Khê phải cố gắng lắm mới không có hành vi “xử lý” phạm pháp với anh.
+
+Hạnh phúc là gì, hạnh phúc là mười ba năm trước, tan trường, có một cậu bé đi trước mặt bạn theo"
+            android:textSize="22sp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
