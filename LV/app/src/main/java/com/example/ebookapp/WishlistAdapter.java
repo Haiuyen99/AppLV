@@ -25,6 +25,7 @@ public class WishlistAdapter extends RecyclerView.Adapter<WishlistAdapter.ViewHo
    // private  int lastPosition = -1 ;
     private Boolean fromSearch ;
 
+
     public Boolean getFromSearch() {
         return fromSearch;
     }
@@ -36,6 +37,14 @@ public class WishlistAdapter extends RecyclerView.Adapter<WishlistAdapter.ViewHo
     public WishlistAdapter(List<WishlistModel> wishlistModelList , Boolean wishlist ) {
         this.wishlistModelList = wishlistModelList;
         this.wishlist = wishlist;
+    }
+
+    public List<WishlistModel> getWishlistModelList() {
+        return wishlistModelList;
+    }
+
+    public void setWishlistModelList(List<WishlistModel> wishlistModelList) {
+        this.wishlistModelList = wishlistModelList;
     }
 
     @NonNull

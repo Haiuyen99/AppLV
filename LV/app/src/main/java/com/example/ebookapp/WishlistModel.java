@@ -1,5 +1,8 @@
 package com.example.ebookapp;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class WishlistModel {
     private  String productImage;
     private  String productTitle;
@@ -7,6 +10,7 @@ public class WishlistModel {
     private  long totalRatings;
     private  String productPrice;
     private  String productID;
+    private ArrayList<String> tags;
 
     public WishlistModel(String productID,String productImage, String productTitle, String ratings, long totalRatings, String productPrice) {
         this.productID = productID;
@@ -17,7 +21,13 @@ public class WishlistModel {
         this.productPrice = productPrice;
     }
 
+    public ArrayList<String> getTags() {
+        return tags;
+    }
 
+    public void setTags(ArrayList<String> tags) {
+        this.tags = tags;
+    }
 
     public String getProductID() {
         return productID;

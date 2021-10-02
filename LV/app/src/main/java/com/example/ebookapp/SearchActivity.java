@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Filter;
@@ -50,6 +51,7 @@ public class SearchActivity extends AppCompatActivity {
         final List<WishlistModel> list = new ArrayList<>();
         final List<String> ids = new ArrayList<>();
         Adapter adapter = new Adapter(list,false);
+        adapter.setFromSearch(true);
         recyclerView.setAdapter(adapter);
 
        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -75,6 +77,8 @@ public class SearchActivity extends AppCompatActivity {
                                            , documentSnapshot.get("average_rating").toString()
                                            , (long) documentSnapshot.get("total_ratings")
                                            , documentSnapshot.get("story_author").toString());
+
+                                   model.setTags((ArrayList<String>) documentSnapshot.get("tags"));
 
                                    // tìm kiếm chuỗi ký tự trong chuỗi
                                    //Kiểm tra xem trong productID có thông tin của từ đầu tiên chưa
@@ -122,8 +126,12 @@ public class SearchActivity extends AppCompatActivity {
 
     class Adapter  extends WishlistAdapter implements Filterable{
 
+      private List<WishlistModel> originalList;
         public Adapter(List<WishlistModel> wishlistModelList, Boolean wishlist) {
             super(wishlistModelList, wishlist);
+             originalList = wishlistModelList;
+
+
         }
 
         @Override
@@ -131,12 +139,44 @@ public class SearchActivity extends AppCompatActivity {
             return new Filter() {
                 @Override
                 protected FilterResults performFiltering(CharSequence constraint) {
-                    // Filter logic
-                    return null;
+                    FilterResults results = new FilterResults();
+                     List<WishlistModel> filteredList = new ArrayList<>();
+                    final  String[] tags = constraint.toString().split("");
+
+                    for(WishlistModel model:originalList){
+
+                       ArrayList<String> presentTags  = new ArrayList<>();
+                       for (String tag:tags){
+                           if(model.getTags().contains(tag)){
+                              presentTags.add(tag);
+
+                           }
+                       }
+                       model.setTags(presentTags);
+                    }
+                    for (int i= tags.length -1 ; i>0; i--){
+                        for(WishlistModel model : originalList){
+                            if(model .getTags().size()== i ){
+                                filteredList.add(model);
+
+                            }
+                        }
+                    }
+
+                    results.values = filteredList;
+                    results.count = filteredList.size();
+
+
+                    return results;
                 }
 
                 @Override
                 protected void publishResults(CharSequence constraint, FilterResults results) {
+
+                    if(results.count >0){
+                        setWishlistModelList((List<WishlistModel>) results.values);
+                    }
+
                     notifyDataSetChanged();
                 }
             };
