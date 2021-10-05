@@ -121,9 +121,9 @@ public class WishlistAdapter extends RecyclerView.Adapter<WishlistAdapter.ViewHo
              itemView.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View v) {
-                     if(fromSearch){
-                       ProductDetailsActivity.fromSearch = true;
-                     }
+                    // if(fromSearch){
+                      // ProductDetailsActivity.fromSearch = true;
+                     //}
 
                      Intent productDetails = new Intent(itemView.getContext(),ProductDetailsActivity.class);
                       productDetails.putExtra("product_ID",productID);
