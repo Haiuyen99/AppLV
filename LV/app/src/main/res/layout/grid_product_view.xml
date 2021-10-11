@@ -10,6 +10,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/grid_layout_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,6 +31,7 @@
         android:layout_marginRight="8dp"
         android:text="Button"
         android:textSize="12sp"
+        android:visibility="gone"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -39,31 +41,29 @@
         android:layout_height="370dp"
          android:columnCount="2"
 
-        android:background="#EEEEEE"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/grid_layout_btn">
-        <include layout="@layout/horizontal_scroll_item"
+        <include layout="@layout/grid_scroll_item"
             android:layout_columnWeight="1"
 
             tools:ignore="IncludeLayoutParam"
           />
-        <include layout="@layout/horizontal_scroll_item"
+        <include layout="@layout/grid_scroll_item"
             android:layout_columnWeight="1"
 
             tools:ignore="IncludeLayoutParam"
           />
 
         <include
-            layout="@layout/horizontal_scroll_item"
-
-
+            layout="@layout/grid_scroll_item"
 
             android:layout_columnWeight="1"
             tools:ignore="IncludeLayoutParam" />
-        <include layout="@layout/horizontal_scroll_item"
+        <include layout="@layout/grid_scroll_item"
             android:layout_columnWeight="1"
 
             tools:ignore="IncludeLayoutParam"
@@ -71,23 +71,6 @@
 
     </GridLayout>
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="#EEEEEE"
-        app:layout_constraintBottom_toBottomOf="@id/grid_layout_product"
-        app:layout_constraintLeft_toLeftOf="@id/grid_layout_product"
-        app:layout_constraintTop_toTopOf="@id/grid_layout_product"
-        app:layout_constraintRight_toRightOf="@id/grid_layout_product"/>
-    <View
-        android:layout_width="1dp"
-        android:layout_height="0dp"
-        android:background="#EEEEEE"
-        app:layout_constraintBottom_toBottomOf="@id/grid_layout_product"
-        app:layout_constraintLeft_toLeftOf="@id/view"
-        app:layout_constraintTop_toTopOf="@id/grid_layout_product"
-        app:layout_constraintRight_toRightOf="@id/grid_layout_product"  />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

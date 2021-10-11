@@ -73,8 +73,6 @@ private List<CategoryModel> catoryModelList;
             @Override
             public void onClick(View v) {
               if (position !=0) {
-
-
                 Intent categoryIntent = new Intent(itemView.getContext(), CategoryActivity.class);
                 categoryIntent.putExtra("CategoryName", name);
                 itemView.getContext().startActivity(categoryIntent);

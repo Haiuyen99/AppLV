@@ -11,12 +11,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.ebookapp.ui.home.HomePageAdapter;
 import com.example.ebookapp.ui.home.HomePageModel;
 
+
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.example.ebookapp.DBqueries.categoryModelList;
 import static com.example.ebookapp.DBqueries.lists;
@@ -27,6 +30,7 @@ public class CategoryActivity extends AppCompatActivity {
 
     private RecyclerView categorieyRecyclerView;
     private  HomePageAdapter adapter;
+    public  static List<WishlistModel> wishlistModelList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,7 @@ public class CategoryActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
       categorieyRecyclerView = findViewById(R.id.category_recyclerView);
+      categorieyRecyclerView.setVisibility(View.VISIBLE);
       LinearLayoutManager testingLinearLayout = new LinearLayoutManager(this);
       testingLinearLayout.setOrientation(LinearLayoutManager.VERTICAL);
       categorieyRecyclerView.setLayoutManager(testingLinearLayout);

@@ -1,5 +1,6 @@
 package com.example.ebookapp.ui.home;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -25,6 +26,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.ebookapp.CategoryActivity;
 import com.example.ebookapp.GridProductLayoutAdapter;
 import com.example.ebookapp.HorizontalProductModel;
 import com.example.ebookapp.HorizontalProductScrollAdapter;
@@ -323,7 +325,13 @@ public class HomePageAdapter extends RecyclerView.Adapter {
         private void setGridProductLayout( List<HorizontalProductModel> horizontalProductModelList ,String title,List<WishlistModel>viewAllProductList){
             gridLayoutTitle.setText(title);
 
-
+           if( title == ""){
+               gridLayoutTitle.setVisibility(View.GONE);
+               gridLayoutButton.setVisibility(View.GONE);
+           }else {
+               gridLayoutTitle.setVisibility(View.VISIBLE);
+               gridLayoutButton.setVisibility(View.VISIBLE);
+           }
             for (int x =0 ; x<4;x++){
                 ImageView productImage = gridView.getChildAt(x).findViewById(R.id.product_img);
                 TextView productTitle = gridView.getChildAt(x).findViewById(R.id.product_title);
