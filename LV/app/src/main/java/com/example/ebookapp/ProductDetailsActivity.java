@@ -125,7 +125,6 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     for (int x = 0; x < 5; x++) {
                         TextView rating = (TextView) ratingsNumberContainer.getChildAt(x);
                         rating.setText(String.valueOf((long) documentSnapshot.get((5 - x) + "_star")));
-
                         ProgressBar progressBar = (ProgressBar) ratingProgressBar.getChildAt(x);
                         int maxprogress = Integer.parseInt(String.valueOf((long) documentSnapshot.get("total_ratings")));
                         progressBar.setMax(maxprogress);
@@ -480,16 +479,6 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
         if (id == android.R.id.home) {
             finish();
-            return true;
-        } else if (id == R.id.main_search_icon) {
-            if(fromSearch){
-                finish();
-            }else {
-                Intent searchIntent = new Intent(this, SearchActivity.class);
-                startActivity(searchIntent);
-            }
-            return true;
-        } else if (id == R.id.main_cart_icon) {
             return true;
         }
         return super.onOptionsItemSelected(item);

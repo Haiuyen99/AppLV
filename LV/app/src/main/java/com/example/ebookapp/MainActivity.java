@@ -56,7 +56,7 @@ implements NavigationView.OnNavigationItemSelectedListener{
     private CircleImageView circleImageView;
     private TextView fullname, email;
     private ImageView addProfileIcon;
-  private ConstraintLayout constraintLayout;
+    private ConstraintLayout constraintLayout;
     private NavigationView navigationView;
 
     private  DrawerLayout drawer;

@@ -17,12 +17,14 @@
             android:id="@+id/chapterNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:text="Chương 1 : "
-            android:textSize="25sp"
-            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:textColor="#555555"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent "
-            />
+            android:layout_marginLeft="10dp" />
 
         <TextView
             android:id="@+id/chapterName"
@@ -30,8 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="Mở ra nhân sinh "
-            android:textStyle="bold"
-            android:textSize="25sp"
+            android:textStyle="italic"
+            android:textColor="#555555"
+            android:textSize="20sp"
             app:layout_constraintLeft_toRightOf="@id/chapterNumber"
             tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -39,7 +42,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="12dp"
+        android:paddingLeft="15dp"
         app:layout_constraintLeft_toLeftOf="@id/chapter"
         app:layout_constraintTop_toBottomOf="@id/chapter">
 
@@ -47,8 +50,8 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="12dp"
-
+            android:layout_marginBottom="20dp"
+           android:textColor="@color/black"
             android:text="Đánh giá: 9.2/10 từ 1743 lượt
 Từ Vi Vũ tính hơi hơi ưa sạch, da mặt cũng hơi hơi dày, ngoài ra còn hơi hơi bỉ ổi, nhưng anh trước mặt mọi người luôn luôn là một Từ Vi Vũ trăng thanh gió mát, tách biệt xa lạ, trong kiêu ngạo có lạnh lùng, trong lạnh lùng có xa cách, trong xa cách có cao sang.
 
@@ -69,7 +72,7 @@ Hoặc là: “Vợ ơi, nấu cơm cho anh đi, là yêu cầu hợp pháp đ�
 Những lúc như vậy, “bạn nhỏ” Thanh Khê phải cố gắng lắm mới không có hành vi “xử lý” phạm pháp với anh.
 
 Hạnh phúc là gì, hạnh phúc là mười ba năm trước, tan trường, có một cậu bé đi trước mặt bạn theo"
-            android:textSize="22sp" />
+            android:textSize="18sp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

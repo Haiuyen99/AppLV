@@ -119,8 +119,6 @@ public class ChapterActivity  extends AppCompatActivity {
         if (id == android.R.id.home) {
             finish();
             return true;
-        } else if (id == R.id.main_search_icon) {
-            return true;
         }
         return super.onOptionsItemSelected(item);
     }
