@@ -8,17 +8,6 @@
         android:icon="@drawable/ic_search"
         app:showAsAction="always"
        android:title="Search"/>
-    <item
-        android:id="@+id/main_notification_icon"
-        android:orderInCategory="100"
-        android:icon="@drawable/ic_notification"
-        app:showAsAction="always"
-        android:title="notification"/>
-    <item
-        android:id="@+id/main_cart_icon"
-        android:orderInCategory="100"
-        android:icon="@drawable/ic_shopping"
-        app:showAsAction="always"
-        android:title="cart"/>
+
 
 </menu>

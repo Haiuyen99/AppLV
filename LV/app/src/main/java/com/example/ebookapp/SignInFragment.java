@@ -175,11 +175,11 @@ public class SignInFragment extends Fragment {
                         });
 
             }else {
-                Toast.makeText(getActivity(),"Incorrect email or password!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Email hoặc mật khẩu bạn nhập không đúng!",Toast.LENGTH_SHORT).show();
 
             }
         }else {
-            Toast.makeText(getActivity(),"Incorrect email or password!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(),"Email hoặc mật khẩu bạn nhập không đúng. !",Toast.LENGTH_SHORT).show();
         }
     }
 

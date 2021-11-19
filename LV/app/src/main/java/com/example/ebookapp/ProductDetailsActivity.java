@@ -177,10 +177,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         addToWishlistBtn = findViewById(R.id.add_to_wishlist_btn);
         productImageViewPager = findViewById(R.id.product_images_viewpager);
         viewpagerIndicator = findViewById(R.id.viewpager_indicator);
-
-
         viewpagerIndicator.setupWithViewPager(productImageViewPager, true);
-
 
         addToWishlistBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -229,7 +226,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                                 ALREADY_ADDED_TO_WISHLIST = true;
                                                 addToWishlistBtn.setSupportImageTintList(getResources().getColorStateList(R.color.colorPrimary));
                                                 DBqueries.wishlist.add(productID);
-                                                Toast.makeText(ProductDetailsActivity.this, "Added to sucessfully", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(ProductDetailsActivity.this, "Đã thêm vào danh sách truyện yêu thích", Toast.LENGTH_SHORT).show();
 
                                             } else {
                                                 String error = task.getException().getMessage();

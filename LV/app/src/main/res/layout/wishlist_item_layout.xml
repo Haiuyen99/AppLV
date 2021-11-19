@@ -66,6 +66,7 @@
         android:layout_marginLeft="8dp"
         android:text="(27) ratings"
         android:textSize="10sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout"
         app:layout_constraintStart_toEndOf="@id/linearLayout"/>
     <TextView

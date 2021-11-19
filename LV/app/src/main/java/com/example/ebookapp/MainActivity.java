@@ -127,10 +127,6 @@ implements NavigationView.OnNavigationItemSelectedListener{
            Intent searchIntent = new Intent(this,SearchActivity.class);
            startActivity(searchIntent);
            return true;
-        } else if (id == R.id.main_notification_icon) {
-            return true;
-        } else if (id == R.id.main_cart_icon) {
-            return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -155,20 +151,13 @@ implements NavigationView.OnNavigationItemSelectedListener{
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_mymall) {
-        setFragment(new HomeFragment(), HOME_FRAGMENT);
-        }else if (id == R.id.nav_myorder) {
 
-        } else if (id == R.id.nav_rewards) {
-
-        } else if (id == R.id.nav_mycart) {
-
-       } else if (id == R.id.nav_wishlist) {
+        if (id == R.id.nav_wishlist) {
      gotoFragment("My wishlist",new MyWishlistFragment(),WISHLIST_FRAGMENT);
 
-       } else if (id == R.id.nav_account) {
+       }
 
-      }else  if (id == R.id.nav_singout){
+      else  if (id == R.id.nav_singout){
             FirebaseAuth.getInstance().signOut();
             DBqueries.clearData();
             Intent registerIntent = new Intent(MainActivity.this,RegissterActivity.class);

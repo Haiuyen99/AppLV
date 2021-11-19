@@ -42,13 +42,12 @@
      android:inputType="textEmailAddress"
      android:textColorHint="#ffffff"
      android:backgroundTint="#ffffff"
-     android:hint="Email Id"
+     android:hint="Email"
      android:ems="10"
      android:textColor="@color/white"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toBottomOf="@id/imageView"
-     />
+     app:layout_constraintTop_toBottomOf="@id/imageView" />
 
        <EditText
            android:id="@+id/edt_signinpassword"
@@ -62,7 +61,7 @@
            android:backgroundTint="#ffffff"
            android:ems="10"
            android:textColor="@color/white"
-           android:hint="Password"
+           android:hint="Mật khẩu"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@id/edt_singinemail" />
@@ -73,7 +72,7 @@
            android:layout_height="wrap_content"
            android:layout_marginLeft="4dp"
            android:layout_marginTop="10dp"
-           android:text="Forgot Password"
+           android:text="Quên mật khẩu"
            android:textColor="@color/white"
            app:layout_constraintStart_toStartOf="@id/edt_signinpassword"
            app:layout_constraintTop_toBottomOf="@id/edt_signinpassword"  />
@@ -86,7 +85,7 @@
            android:layout_marginBottom="8dp"
            android:layout_marginRight="16dp"
            android:layout_marginLeft="16dp"
-           android:text="Sign in"
+           android:text="Đăng nhập"
            android:textColor="@color/purple_500"
            android:backgroundTint="@color/white"
            android:textAllCaps="false"
@@ -102,7 +101,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
              android:layout_marginTop="2dp"
-           android:text="Don't have an account? Sign Up"
+           android:text="Nếu bạn chưa có tài khoản hãy đăng ký tại đây!"
            android:textColor="@color/white"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintBottom_toBottomOf="parent"

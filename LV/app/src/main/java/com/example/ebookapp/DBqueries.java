@@ -222,7 +222,7 @@ public class DBqueries {
                            MyWishlistFragment.wishlistAdapter.notifyDataSetChanged();
                        }
                        ProductDetailsActivity.ALREADY_ADDED_TO_WISHLIST = false;
-                       Toast.makeText(context,"Removed successfully!",Toast.LENGTH_SHORT).show();
+                       Toast.makeText(context,"Bạn đã xóa thành công!",Toast.LENGTH_SHORT).show();
 
                        ProductDetailsActivity.addToWishlistBtn.setSupportImageTintList(ColorStateList.valueOf(Color.parseColor("#9e9e9e")));
 
